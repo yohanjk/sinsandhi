@@ -12,6 +12,23 @@
         l - Left
         r - Right
 
+    Pattern Notation
+    {
+        '"Pattern Name/Key"': {
+            'L': '"Suffix Pattern"',
+            'R': '"Prefix Pattern"',
+            'J': (
+                '"Joined Sandhi Pattern"',
+                "Left split idx",
+                "Right split idx",
+                "Left consonant idx or None",
+                "Left vowel idx or None"
+                "Right consonant idx or None",
+                "Right vowel idx or None"
+            )
+        }
+    }
+
 """
 
 Patterns = {
@@ -20,21 +37,21 @@ Patterns = {
     'Pattern-O1': {
         'L': 'kCnV',
         'R': 'nCkV',
-        'J': 'lCrV'
+        'J': ('lCrV', 0, 2, 0, None, None, None, None, 1)
     },
 
     # Purwaswara Lopa Sandhi Pattern
     'Pattern-O2': {
         'L': 'kCdV',
         'R': 'nCkV',
-        'J': 'lCrV'
+        'J': ('lCrV', 0, 2, 0, None, None, None, None, 1)
     },
 
     # Paraswara Lopa Sandhi Pattern
     'Pattern-O3': {
         'L': 'kCkV',
         'R': 'nCdV',
-        'J': 'lClV'
+        'J': ('lClV', 0, 2, 0, 1, None, None, None, None)
     },
 
 

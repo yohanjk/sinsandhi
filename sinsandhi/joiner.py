@@ -55,7 +55,7 @@ def join_words(l, r):
             rji = calculate_rji(rw)
 
             middle = []
-            join_str = Patterns[rule['P']]['J']
+            join_str = Patterns[rule['P']]['J'][0]
             for i in range(0, len(join_str), 2):
                 if join_str[i:i+2] == 'lC':
                     middle.append(lw[-2])
