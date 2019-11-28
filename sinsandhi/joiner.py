@@ -40,7 +40,6 @@ def calculate_rji(word):
 
 
 def join_words(l, r):
-
     lw = process_string(l)
     rw = process_string(r)
     joined_words = []
@@ -57,22 +56,21 @@ def join_words(l, r):
             middle = []
             join_str = Patterns[rule['P']]['J'][0]
             for i in range(0, len(join_str), 2):
-                if join_str[i:i+2] == 'lC':
+                if join_str[i:i + 2] == 'lC':
                     middle.append(lw[-2])
-                if join_str[i:i+2] == 'lV':
+                if join_str[i:i + 2] == 'lV':
                     middle.append(lw[-1])
-                elif join_str[i:i+2] == 'rV':
+                elif join_str[i:i + 2] == 'rV':
                     middle.append(rw[1])
 
             joined_word = lw[:lji] + middle + rw[rji:]
             joined_words.append(convert_to_string(joined_word))
+
+    while l in joined_words: joined_words.remove(l)
+    while r in joined_words: joined_words.remove(r)
 
     return joined_words
 
 
 class Joiner:
     pass
-
-
-
-

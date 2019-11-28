@@ -68,7 +68,7 @@ def split_word(w):
                 if w1 == cw:
                     continue
                 for w2 in rwl:
-                    splitted_words.append((convert_to_string(w1),convert_to_string(w2)))
+                    splitted_words.append((convert_to_string(w1), convert_to_string(w2)))
 
     return splitted_words
 
