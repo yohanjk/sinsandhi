@@ -2,6 +2,10 @@ from sinsandhi.rules.patterns import Patterns
 from sinsandhi.rules.rules import Rules
 from sinsandhi.utils.strings import process_string, convert_to_string
 
+__all__ = [
+    'split_word'
+]
+
 
 def split_word(w):
 
