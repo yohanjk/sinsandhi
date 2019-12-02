@@ -17,23 +17,20 @@ def process_string(string):
             char_list.append(None)
         elif ord(string[i]) == 8205:
             char_list.append(string[i])
+            char_list.append(None)
+        elif string[i] == 'ර' and ord(string[i-1]) == 8205:
+            del char_list[-1]
+            char_list.append('ර')
+        elif string[i] in ['ං', 'ඃ']:
+            char_list.append(string[i])
+            char_list.append(None)
         else:
-            if ord(string[i-1]) == 8205:
-                if string[i] == 'ර':
-                    char_list.append('ර')
-                else:
-                    char_list.append(None)
-                    char_list.append(string[i])
-            elif string[i] in ['ං', 'ඃ']:
-                char_list.append(string[i])
-                char_list.append(None)
-            else:
-                char_list.append(string[i] + '්')
-                if i + 1 < length:
-                    if string[i + 1] in letters.BASE_CONSONANTS:
-                        char_list.append('අ')
-                else:
+            char_list.append(string[i] + '්')
+            if i + 1 < length:
+                if string[i + 1] in letters.BASE_CONSONANTS:
                     char_list.append('අ')
+            else:
+                char_list.append('අ')
     return char_list
 
 
