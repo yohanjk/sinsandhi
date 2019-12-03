@@ -62,12 +62,12 @@ def join_words(l, r):
                     middle.append(lw[-1])
                 elif join_str[i:i + 2] == 'rV':
                     middle.append(rw[1])
+                elif join_str[i:i + 2] == 'iV':
+                    middle.append(rule['I']['V'])
 
             joined_word = lw[:lji] + middle + rw[rji:]
-            joined_words.append(convert_to_string(joined_word))
-
-    while l in joined_words: joined_words.remove(l)
-    while r in joined_words: joined_words.remove(r)
+            if joined_word != lw and joined_word != rw:
+                joined_words.append(convert_to_string(joined_word))
 
     return joined_words
 

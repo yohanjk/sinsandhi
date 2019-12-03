@@ -22,7 +22,9 @@
                 "Left split idx",
                 "Right split idx",
                 "Left consonant idx or None",
-                "Left vowel idx or None"
+                "Left vowel idx or None",
+                "Inserted consonant idx or None"
+                "Inserted vowel idx or None"
                 "Right consonant idx or None",
                 "Right vowel idx or None"
             )
@@ -52,6 +54,13 @@ Patterns = {
         'L': 'kCkV',
         'R': 'nCdV',
         'J': ('lClV', 0, 2, 0, 1, None, None, None, None)
+    },
+
+    # Swaradesha Sandhi Pattern
+    'Pattern-O4': {
+        'L': 'kCdV',
+        'R': 'nCdV',
+        'J': ('lCiV', 0, 2, 0, None, None, 1, None, None)
     },
 
 

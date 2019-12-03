@@ -18,7 +18,7 @@ def split_word(w):
         join = Patterns[rule['P']]['J']
         j_length = len(join[0])
 
-        for i in range(2, w_length, int(j_length/2)):
+        for i in range(0, w_length, int(j_length/2)):
 
             applicable = True
 
@@ -35,9 +35,9 @@ def split_word(w):
             rci = None if join[7] is None else i + join[7]
             rvi = None if join[8] is None else i + join[8]
 
-            if ici is not None and cw[ici] not in rule['I']['C']:
+            if ici is not None and cw[ici] != rule['I']['C']:
                 applicable = False
-            if ivi is not None and cw[ici] not in rule['I']['V']:
+            if ivi is not None and cw[ivi] != rule['I']['V']:
                 applicable = False
 
             if applicable:
