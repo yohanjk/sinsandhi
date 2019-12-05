@@ -60,7 +60,8 @@ def split_word(w):
 
                 rp = Patterns[rule['P']]['R']
                 if len(rp) > 0:
-                    if rp == 'nCkV' and rci is None and rvi is not None and cw[rvi] in rule['R']['V']:
+                    if rp == 'nCkV' and rci is None and rvi is not None and \
+                            rvi < w_length and cw[rvi] in rule['R']['V']:
                         rwl.append([None] + [cw[rvi]] + rwb)
                     elif rp == 'nCdV' and rci is None and rvi is None:
                         for v in rule['R']['V']:
