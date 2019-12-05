@@ -64,6 +64,10 @@ def join_words(l, r):
                     middle.append(rw[1])
                 elif join_str[i:i + 2] == 'iV':
                     middle.append(rule['I']['V'])
+                elif join_str[i:i + 2] == 'iC':
+                    middle.append(rule['I']['C'])
+                elif join_str[i:i + 2] == 'nV':
+                    middle.append(None)
 
             joined_word = lw[:lji] + middle + rw[rji:]
             if joined_word != lw and joined_word != rw:

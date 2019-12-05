@@ -63,5 +63,11 @@ Patterns = {
         'J': ('lCiV', 0, 2, 0, None, None, 1, None, None)
     },
 
+    # svara sandhi - guṇa sandhiya
+    'Pattern-O5': {
+        'L': 'kCdV',
+        'R': 'nCdV',
+        'J': ('lCiViCnV', 0, 4, 0, None, 2, 1, None, None)
+    },
 
 }
