@@ -32,12 +32,18 @@ def split_word(w):
             lvi = None if join[4] is None else i + join[4]
             ici = None if join[5] is None else i + join[5]
             ivi = None if join[6] is None else i + join[6]
-            rci = None if join[7] is None else i + join[7]
-            rvi = None if join[8] is None else i + join[8]
+            idi = None if join[7] is None else i + join[7]
+            iwi = None if join[8] is None else i + join[8]
+            rci = None if join[9] is None else i + join[9]
+            rvi = None if join[10] is None else i + join[10]
 
             if ici is not None and (ici >= w_length or cw[ici] != rule['I']['C']):
                 applicable = False
             if ivi is not None and (ivi >= w_length or cw[ivi] != rule['I']['V']):
+                applicable = False
+            if idi is not None and (idi >= w_length or cw[idi] != rule['I']['D']):
+                applicable = False
+            if iwi is not None and (iwi >= w_length or cw[iwi] != rule['I']['W']):
                 applicable = False
 
             if applicable:

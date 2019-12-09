@@ -4,6 +4,8 @@
     Notations
         C - Consonant
         V - Vowel
+        D - 2nd Consonant
+        W - 2nd Vowel
 
         k - Keep
         d - Delete
@@ -25,6 +27,8 @@
                 "Left vowel idx or None",
                 "Inserted consonant idx or None"
                 "Inserted vowel idx or None"
+                "Inserted 2nd consonant idx or None"
+                "Inserted 2nd vowel idx or None"
                 "Right consonant idx or None",
                 "Right vowel idx or None"
             )
@@ -39,35 +43,52 @@ Patterns = {
     'Pattern-O1': {
         'L': 'kCnV',
         'R': 'nCkV',
-        'J': ('lCrV', 0, 2, 0, None, None, None, None, 1)
+        'J': ('lCrV', 0, 2, 0, None, None, None, None, None, None, 1)
     },
 
     # Purwaswara Lopa Sandhi Pattern
     'Pattern-O2': {
         'L': 'kCdV',
         'R': 'nCkV',
-        'J': ('lCrV', 0, 2, 0, None, None, None, None, 1)
+        'J': ('lCrV', 0, 2, 0, None, None, None, None, None, None, 1)
     },
 
     # Paraswara Lopa Sandhi Pattern
     'Pattern-O3': {
         'L': 'kCkV',
         'R': 'nCdV',
-        'J': ('lClV', 0, 2, 0, 1, None, None, None, None)
+        'J': ('lClV', 0, 2, 0, 1, None, None, None, None, None, None)
     },
 
     # Swaradesha Sandhi Pattern
     'Pattern-O4': {
         'L': 'kCdV',
         'R': 'nCdV',
-        'J': ('lCiV', 0, 2, 0, None, None, 1, None, None)
+        'J': ('lCiV', 0, 2, 0, None, None, 1, None, None, None, None)
     },
 
     # svara sandhi - guṇa sandhiya
     'Pattern-O5': {
         'L': 'kCdV',
         'R': 'nCdV',
-        'J': ('lCiViCnV', 0, 4, 0, None, 2, 1, None, None)
+        'J': ('lCiViCnV', 0, 4, 0, None, 2, 1, None, None, None, None)
+    },
+
+    # svara sandhi - ardha svara bhāva sandhiya
+    'Pattern-O6': {
+        'L': 'kCdV',
+        'R': 'nCkV',
+        'J': ('lCnViCnViDrV', 0, 6, 0, None, 2, None, 4, None, None, 5)
+    },
+    'Pattern-O7': {
+        'L': 'kCdV',
+        'R': 'nCkV',
+        'J': ('lCnViCrV', 0, 4, 0, None, 2, None, None, None, None, 3)
+    },
+    'Pattern-O8': {
+        'L': 'kCdV',
+        'R': 'nCdV',
+        'J': ('lCnViCiV', 0, 4, 0, None, 2, 3, None, None, None, None)
     },
 
 }
