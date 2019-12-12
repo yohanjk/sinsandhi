@@ -60,6 +60,8 @@ def join_words(l, r):
                     middle.append(lw[-2])
                 elif join_str[i:i + 2] == 'lV':
                     middle.append(lw[-1])
+                elif join_str[i:i + 2] == 'rC':
+                    middle.append(rw[0])
                 elif join_str[i:i + 2] == 'rV':
                     middle.append(rw[1])
                 elif join_str[i:i + 2] == 'iV':

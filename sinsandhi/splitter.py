@@ -37,6 +37,10 @@ def split_word(w):
             rci = None if join[9] is None else i + join[9]
             rvi = None if join[10] is None else i + join[10]
 
+            if lci is not None and lci >= w_length:
+                applicable = False
+            if lvi is not None and lvi >= w_length:
+                applicable = False
             if ici is not None and (ici >= w_length or cw[ici] != rule['I']['C']):
                 applicable = False
             if ivi is not None and (ivi >= w_length or cw[ivi] != rule['I']['V']):
@@ -45,12 +49,17 @@ def split_word(w):
                 applicable = False
             if iwi is not None and (iwi >= w_length or cw[iwi] != rule['I']['W']):
                 applicable = False
+            if rci is not None and rci >= w_length:
+                applicable = False
+            if rvi is not None and rvi >= w_length:
+                applicable = False
 
             if applicable:
 
                 lp = Patterns[rule['P']]['L']
                 if len(lp) > 0:
-                    if lp == 'kCkV' and lci is not None and lvi is not None and cw[lci] in rule['L']['C'] and cw[lvi] in rule['L']['V']:
+                    if lp == 'kCkV' and lci is not None and lvi is not None and \
+                            cw[lci] in rule['L']['C'] and cw[lvi] in rule['L']['V']:
                         lwl.append(lwb + [cw[lci]] + [cw[lvi]])
                     elif lp == 'kCnV' and lci is not None and lvi is None and cw[lci] in rule['L']['C']:
                         lwl.append(lwb + [cw[lci]] + [None])
@@ -66,14 +75,20 @@ def split_word(w):
 
                 rp = Patterns[rule['P']]['R']
                 if len(rp) > 0:
-                    if rp == 'nCkV' and rci is None and rvi is not None and \
+                    if rp == 'kCkV' and rci is not None and rvi is not None and \
+                            cw[rci] in rule['R']['C'] and cw[rvi] in rule['R']['V']:
+                        rwl.append([cw[rci]] + [cw[rvi]] + rwb)
+                    elif rp == 'nCkV' and rci is None and rvi is not None and \
                             rvi < w_length and cw[rvi] in rule['R']['V']:
                         rwl.append([None] + [cw[rvi]] + rwb)
                     elif rp == 'nCdV' and rci is None and rvi is None:
                         for v in rule['R']['V']:
                             rwl.append([None] + [v] + rwb)
+                    elif rp == 'dCkV' and rci is None and rvi is not None and cw[rvi] in rule['R']['V']:
+                        for v in rule['R']['C']:
+                            rwl.append([v] + [cw[rvi]] + rwb)
                 else:
-                    lwl.append(lwb)
+                    rwl.append(lwb)
 
             for w1 in lwl:
                 if w1 == cw:
