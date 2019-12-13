@@ -97,7 +97,7 @@ Patterns = {
         'R': 'dCkV',
         'J': ('lClViCrV', 0, 4, 0, 1, 2, None, None, None, None, 3)
     },
-    'Pattern-10': {
+    'Pattern-10': {         # Gatrākshạrạ Lōpạ Sandhiya
         'L': 'dCdV',
         'R': 'kCkV',
         'J': ('iCnVrCrV', 0, 4, None, None, 0, None, None, None, 2, 3)
