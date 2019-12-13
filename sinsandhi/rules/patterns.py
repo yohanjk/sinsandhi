@@ -110,4 +110,11 @@ Patterns = {
         'J': ('lCnVlCrV', 0, 4, 0, None, None, None, None, None, None, 3)
     },
 
+    # Parạ Rūpạ Sandhiya
+    'Pattern-12': {
+        'L': 'dCnV',
+        'R': 'kCkV',
+        'J': ('rCnVrCrV', 0, 4, None, None, None, None, None, None, 0, 3)
+    },
+
 }
