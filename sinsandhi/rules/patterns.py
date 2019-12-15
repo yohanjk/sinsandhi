@@ -141,4 +141,16 @@ Patterns = {
         'J': ('lCiVrCrV', 0, 4, 0, None, None, 1, None, None, 2, 3)
     },
 
+    # Dvitvạ Rūpạ Sandhiya
+    'Pattern-17': {
+        'L': 'kCdV',
+        'R': 'nCkV',
+        'J': ('lCnVlCrV', 0, 4, 0, None, None, None, None, None, None, 3)
+    },
+    'Pattern-18': {
+        'L': 'kCkV',
+        'R': 'kCkV',
+        'J': ('lClVrCnVrCrV', 0, 6, 0, 1, None, None, None, None, 2, 5)
+    },
+
 }
