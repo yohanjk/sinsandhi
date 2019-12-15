@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='sinsandhi',
     version='',
-    packages=['sinsandhi', 'sinsandhi.rules', 'sinsandhi.utils'],
+    packages=['sinsandhi'],
     url='https://github.com/yohanjk/sinsandhi',
     license='',
     author='Yohan Karunanayake',

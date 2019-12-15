@@ -32,9 +32,13 @@ python setup.py install
     ```
 * Word Frequency Dictionary
     * Tool uses a word frequency dictionary to select the most probable outcome. 
-    * When tool is initializing, the path of a Python dictionary saved as a `pickle file` can be specified, which has format of `{'word':'frequency in int'}`
+    * When tool is initializing, the path of a Python dictionary saved as a `pickle file` can be specified, which has the format of `{'word':'frequency as int'}`
 * Output
     * Tool outputs a dictionary with `best` and `output` keys. Here, `best` and `output` keys contain the best and all possible results respectively.
+    * Example
+    ```python
+    {'best': 'ගුරූපදේශ', 'output': {'ගුරූපදේශ': 13, 'ගුරුපදේශ': 2}}
+    ```
 
 ## Notes
-    * Tested on Python 3.7.3
+   * Tested on Python 3.7.3
