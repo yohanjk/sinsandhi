@@ -117,4 +117,28 @@ Patterns = {
         'J': ('rCnVrCrV', 0, 4, None, None, None, None, None, None, 0, 3)
     },
 
+    # Āgạmạ Sandhiya
+    # Viyanjana
+    'Pattern-13': {
+        'L': 'kCkV',
+        'R': 'nCkV',
+        'J': ('lClViCrV', 0, 4, 0, 1, 2, None, None, None, None, 3)
+    },
+    'Pattern-14': {
+        'L': 'kCdV',
+        'R': 'nCkV',
+        'J': ('lCiViCrV', 0, 4, 0, None, 2, 1, None, None, None, 3)
+    },
+    'Pattern-15': {
+        'L': 'kCdV',
+        'R': 'nCdV',
+        'J': ('lCiViCiW', 0, 4, 0, None, 2, 1, None, 3, None, None)
+    },
+    # Swara
+    'Pattern-16': {
+        'L': 'kCnV',
+        'R': 'kCkV',
+        'J': ('lCiVrCrV', 0, 4, 0, None, None, 1, None, None, 2, 3)
+    },
+
 }

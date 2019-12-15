@@ -66,6 +66,9 @@ def split_word(w):
                     elif lp == 'kCdV' and lci is not None and lvi is None and cw[lci] in rule['L']['C']:
                         for v in rule['L']['V']:
                             lwl.append(lwb + [cw[lci]] + [v])
+                    elif lp == 'dCnV' and lvi is None:
+                        for v in rule['L']['C']:
+                            lwl.append(lwb + [v] + [None])
                     elif lp == 'dCdV' and lci is None and lvi is None:
                         for c in rule['L']['C']:
                             for v in rule['L']['V']:
