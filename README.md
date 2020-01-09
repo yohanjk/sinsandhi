@@ -32,12 +32,25 @@ python setup.py install
     ```
 * Word Frequency Dictionary
     * Tool uses a word frequency dictionary to select the most probable outcome. 
-    * When tool is initializing, the path of a Python dictionary saved as a `pickle file` can be specified, which has the format of `{'word':'frequency as int'}`
+    * When tool is initializing, the path of the word frequency dictionary can be specified, which is a text file with the following format. 
+    ```text
+      <word> <frequency as int>
+      <word> <frequency as int>
+      <word> <frequency as int>
+    ```
+    * Additionally, tool has a utility function to create a word frequency dictionary from a large text file as follows.
+    ```python
+      from sinsandhi import create_word_freq_dic
+  
+      text_file = 'data/sample.txt'
+      freq_dic_file = 'data/sample_freq_dic.txt'
+      create_word_freq_dic(text_file, freq_dic_file)  
+    ``` 
 * Output
     * Tool outputs a dictionary with `best` and `output` keys. Here, `best` and `output` keys contain the best and all possible results respectively.
     * Example
     ```python
-    {'best': 'ගුරූපදේශ', 'output': {'ගුරූපදේශ': 13, 'ගුරුපදේශ': 2}}
+      {'best': 'ගුරූපදේශ', 'output': {'ගුරූපදේශ': 13, 'ගුරුපදේශ': 2}}
     ```
 
 ## Notes

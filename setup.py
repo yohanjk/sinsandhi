@@ -8,5 +8,6 @@ setup(
     license='',
     author='Yohan Karunanayake',
     author_email='yohan.13@cse.mrt.ac.lk',
-    description='Sinhala word joinig and splitting tool'
+    description='Sinhala word joinig and splitting tool',
+    install_requires=['nltk', 'tqdm']
 )

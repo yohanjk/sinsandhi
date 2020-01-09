@@ -5,6 +5,7 @@ from statistics import harmonic_mean
 
 from sinsandhi.joiner import join_words
 from sinsandhi.splitter import split_word
+from sinsandhi.utils.word_freq import read_freq_dic
 
 
 class SandhiTool:
@@ -12,14 +13,10 @@ class SandhiTool:
     def __init__(self, wfd_path=None):
         """
 
-        :param wfd_path: path to word frequency dictionary pickle file
+        :param wfd_path: path to word frequency dictionary file
         """
         if wfd_path is not None:
-            if os.path.exists(wfd_path):
-                with open(wfd_path, 'rb') as file:
-                    self.freq_dic = pickle.load(file)
-            else:
-                raise Exception('Unable to load word frequency dictionary')
+            self.freq_dic = read_freq_dic(wfd_path)
         else:
             self.freq_dic = {}
 
