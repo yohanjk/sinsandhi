@@ -3,7 +3,9 @@
 Word joining and splitting tool based on Sinhalese (සිංහල) Sandhi (සන්ධි) rules.
 
 ## Installation
-
+* Dependencies
+    * nltk - To process text files
+    * tqdm
 ```bash
 git clone https://github.com/yohanjk/sinsandhi.git
 cd sinsandhi
