@@ -53,7 +53,7 @@ def read_freq_dic(freq_dic_path):
             for line in file:
                 data = line.split()
                 if len(data) == 2:
-                    freq[data[0]] = data[1]
+                    freq[data[0]] = int(data[1])
 
     except IOError:
         print('Error while reading frequency dictionary')
