@@ -1,9 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='sinsandhi',
     version='',
-    packages=['sinsandhi'],
+    packages=find_packages(),
     url='https://github.com/yohanjk/sinsandhi',
     license='',
     author='Yohan Karunanayake',
