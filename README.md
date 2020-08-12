@@ -18,7 +18,7 @@ python setup.py install
     ```python
     from sinsandhi import SandhiTool
     
-    freq_dic_path = 'word_freq_dic.pickle'
+    freq_dic_path = 'word_freq_dic.txt'
     sandhitool = SandhiTool(freq_dic_path) # or SandhiTool()
     
     sandhitool.join('ගුරු', 'උපදේශ')
@@ -27,7 +27,7 @@ python setup.py install
     ```python
     from sinsandhi import SandhiTool
     
-    freq_dic_path = 'word_freq_dic.pickle'
+    freq_dic_path = 'word_freq_dic.txt'
     sandhitool = SandhiTool(freq_dic_path) # or SandhiTool()
     
     sandhitool.split('ගුරූපදේශ')
